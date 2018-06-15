@@ -1,0 +1,30 @@
+.parent-container {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    input[type="text"] {
+        outline: none;
+        border: none;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+
+        & + label {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+
+    input::placeholder {
+        color: $checked-todo-color;
+        font-style: italic;
+    }
+}

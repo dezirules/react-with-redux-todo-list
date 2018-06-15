@@ -1,0 +1,54 @@
+.todo-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 5px;
+    border-bottom: 1px dashed $border-color;
+
+    &:last-of-type {
+        border-bottom: 1px solid $border-color;
+    }
+
+    &:hover .delete-todo {
+        opacity: 0.5;
+    }
+
+    div {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+    }
+
+    .edit-todo {
+        flex-grow: 1;
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    .todo-text {
+        flex-grow: 1;
+        word-break: break-all;
+        cursor: text;
+    }
+
+    .todo-checked {
+        text-decoration: line-through;
+        color: $checked-todo-color;
+    }
+
+    .delete-todo {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+        color: $delete-todo-color;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .fa-checkmark {
+        color: $checkmark-color;
+    }
+}

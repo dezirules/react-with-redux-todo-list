@@ -1,0 +1,83 @@
+@import 'vars';
+@import 'global';
+@import 'todoitem';
+
+.parent-container {
+    display: block;
+    font-size: 24px;
+    font-family: inherit;
+    word-wrap: break-word;
+    width: 500px;
+    border: 1px solid $border-color;
+    border-bottom: none;
+    box-shadow: 3px 3px 5px 0px rgba(128,128,128,1);
+
+    .header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+        padding: 10px 10px 10px 5px;
+
+        .toggle-all {
+            color: $checked-todo-color;
+        }
+
+        .input-todo {
+            width: 100%;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        .extra-padding {
+            padding-left: 37px;
+        }
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $footer-text-color;
+        font-size: 16px;
+        border-bottom: 1px solid $border-color;
+        padding: 5px 10px;
+
+        .filter-todos {
+            display: flex;
+
+            li {
+                display: flex;
+            }
+        }
+
+        .todo-count {
+            text-align: left;
+            cursor: default;
+        }
+
+        .filter-button {
+            padding: 3px;
+            margin-right: 3px;
+            border: 1px solid transparent;
+            cursor: pointer;
+
+            &:not(.active):hover {
+                border: 1px solid $checked-todo-color;
+                border-radius: 3px;
+            }
+        }
+
+        .active {
+            border: 1px solid $checkmark-color;
+            border-radius: 3px;
+        }
+
+        .clear-completed {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
